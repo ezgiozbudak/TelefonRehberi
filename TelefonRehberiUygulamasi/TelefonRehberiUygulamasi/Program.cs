@@ -11,15 +11,6 @@ namespace TelefonRehberiUygulamasi
             a.Giris();
             int secilenSayi = a.SecimSayi();
             a.Secim(secilenSayi);
-
-            //Kisiler kisi = new Kisiler();
-            //kisi.kisiListesi();
-            //kisi.KisiListesi.RemoveAt(1);
-            //foreach(var item in kisi.KisiListesi)
-            //{
-            //    Console.WriteLine(item.isim);
-            //    Console.WriteLine(item.soyisim);
-            //}
         }
 
         public void Giris()
@@ -50,10 +41,16 @@ namespace TelefonRehberiUygulamasi
             kisi.kisiListesi();
             switch (sayi)
             {
-                case 1: kisi.KisiEkle();
+                case 1: kisi.KisiEkle(kisi);
                     break;
                 case 2: 
                      kisi.ListedeAra(kisi);
+                    break;
+                case 3: kisi.Guncelle(kisi);
+                    break;
+                case 4: kisi.ListeYaz();
+                    break;
+                case 5:kisi.islemsecimi(kisi);
                     break;
             }
 
